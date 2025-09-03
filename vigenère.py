@@ -7,12 +7,18 @@ sentence = list(sentence.lower())
 keyword = list(keyword.lower())
 
 
-if len(sentence) == len(keyword):
-    print("yes")
-else:
-    print("no")
+def lengthner(sentence, keyword):
+    if len(sentence) > len(keyword):
+        word = [keyword[i % len(keyword)] for i in range(len(sentence))]
+        return word
+    elif len(sentence) < len(keyword):
+        word = [keyword[i % len(keyword)] for i in range(len(sentence))]
+        return word
+    elif len(sentence) == len(keyword):
+        return keyword
 
+keyword = lengthner(sentence,keyword)
 
-
+print(keyword)
 
 
