@@ -22,6 +22,10 @@ def get_indexes(letters, alphabetlist):
 
 keyword = lengthner(sentence,keyword)
 
+encrypted_indexes = [(s + k) % 26 for s, k in zip(sentence, keyword)]
+
+encrypted_letters = [alphabetlist[i] for i in encrypted_indexes]
+
 
 sentence = get_indexes(sentence, alphabetlist)
 keyword = get_indexes(keyword,alphabetlist)
