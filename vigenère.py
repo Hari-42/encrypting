@@ -17,8 +17,17 @@ def lengthner(sentence, keyword):
     elif len(sentence) == len(keyword):
         return keyword
 
+def get_indexes(letters, alphabetlist):
+    return [alphabetlist.index(letter) for letter in letters if letter in alphabetlist]
+
 keyword = lengthner(sentence,keyword)
 
+
+sentence = get_indexes(sentence, alphabetlist)
+keyword = get_indexes(keyword,alphabetlist)
+
+
+print(sentence)
 print(keyword)
 
 
